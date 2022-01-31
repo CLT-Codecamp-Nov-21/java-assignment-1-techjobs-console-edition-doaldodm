@@ -55,7 +55,7 @@ public class TechJobs {
                 String searchField = getUserSelection("Search by:", columnChoices);
 
                 // What is their search term?
-                System.out.println("\r\nSearch term:");
+                System.out.println("\nSearch term:");
                 String searchTerm = in.nextLine();
 
                 if (searchField.equals("all")) {
@@ -74,7 +74,7 @@ public class TechJobs {
         Boolean validChoice = false;
         String[] choiceKeys = new String[choices.size()];
 
-        // Put the choices in an ordered structure so we can
+        // Put the choices in an ordered structure, so we can
         // associate an integer with each one
         int i = 0;
         for (String choiceKey : choices.keySet()) {
@@ -84,7 +84,7 @@ public class TechJobs {
 
         do {
 
-            System.out.println("\r\n" + menuHeader);
+            System.out.println("\n" + menuHeader);
 
             // Print available choices
             for (int j = 0; j < choiceKeys.length; j++) {
@@ -118,8 +118,7 @@ public class TechJobs {
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
         if (!someJobs.isEmpty()) {
             for (HashMap<String, String> someJob : someJobs) {
-
-                System.out.println("\r\n*****");
+                System.out.println("\n*****");
                 for (String key : someJob.keySet()) {
                     System.out.println(key + ": " + someJob.get(key));
                 }
